@@ -4,34 +4,34 @@
 |---|---|
 | **Proyecto** | BookHive — plataforma de gestión de bibliotecas institucionales |
 | **Equipo** | Johan Camilo Bedoya · Fernando Zuluaga Botero |
-| **Decisiones registradas** | 50 |
-| **Período** | 04/09/2026 – 22/09/2026 |
+| **Decisiones registradas** | 58 |
+| **Período** | 04/09/2026 – 27/09/2026 |
 
 ## Índice
 
 | ID | Decisión | Fecha | Estado |
 |---|---|---|---|
-| [ADR-001](#adr-001) | Selección de la plataforma de nube para el ambiente de despliegue | 16/09/2026 | Propuesto |
+| [ADR-001](#adr-001) | Selección de la plataforma de nube para el ambiente de despliegue | 16/09/2026 | Aceptado |
 | [ADR-002](#adr-002) | Entorno de ejecución del backend | 18/09/2026 | Propuesto |
-| [ADR-003](#adr-003) | Formato de empaquetado del Back End | 18/09/2026 | Propuesto |
+| [ADR-003](#adr-003) | Formato de empaquetado del backend | 18/09/2026 | Propuesto |
 | [ADR-004](#adr-004) | Selección del estilo arquitectónico del backend | 18/09/2026 | Propuesto |
 | [ADR-005](#adr-005) | Modelo de programación del sistema: Reactivo, no reactivo o mixto | 17/09/2026 | Propuesto |
 | [ADR-006](#adr-006) | Selección de la tecnología del backend | 20/09/2026 | Propuesto |
-| [ADR-007](#adr-007) | Estilo de comunicación de la API de BookHive | 17/09/2026 | Propuesto |
+| [ADR-007](#adr-007) | Estilo de comunicación de la API de BookHive | 17/09/2026 | Reemplazado por ADR-052 |
 | [ADR-008](#adr-008) | Selección del estilo arquitectónico de la aplicación web | 19/09/2026 | Propuesto |
 | [ADR-009](#adr-009) | Selección de la tecnología de la aplicación web | 19/09/2026 | Propuesto |
-| [ADR-010](#adr-010) | Elección del tipo de motor de base de datos: Relacional vs no relacional | 04/09/2026 | Propuesto |
+| [ADR-010](#adr-010) | Elección del tipo de motor de base de datos: relacional vs no relacional | 04/09/2026 | Aceptado |
 | [ADR-011](#adr-011) | Estrategia de aislamiento de datos por institución a nivel de base de datos | 06/09/2026 | Propuesto |
-| [ADR-012](#adr-012) | Elección del motor de base de datos relacional | 04/09/2026 | Propuesto |
-| [ADR-013](#adr-013) | Disponibilidad de la base de datos ante la falla del servidor | 07/09/2026 | Propuesto |
-| [ADR-014](#adr-014) | Copias de seguridad de la información | 07/09/2026 | Propuesto |
+| [ADR-012](#adr-012) | Elección del motor de base de datos relacional | 04/09/2026 | Aceptado |
+| [ADR-013](#adr-013) | Disponibilidad de la base de datos ante la falla del servidor | 07/09/2026 | Aceptado |
+| [ADR-014](#adr-014) | Copias de seguridad de la información | 07/09/2026 | Aceptado |
 | [ADR-015](#adr-015) | Selección de la herramienta de migraciones de base de datos | 12/09/2026 | Propuesto |
 | [ADR-016](#adr-016) | Manejo de zona horaria en los registros del sistema | 05/09/2026 | Propuesto |
-| [ADR-017](#adr-017) | Catálogo de parámetros de negocio (Parameter catalog) | 18/09/2026 | Propuesto |
-| [ADR-018](#adr-018) | Catálogo de mensajes de la aplicación (Message Catalog) | 18/09/2026 | Propuesto |
+| [ADR-017](#adr-017) | Catálogo de parámetros de negocio (Parameter catalog) | 18/09/2026 | Aceptado |
+| [ADR-018](#adr-018) | Catálogo de mensajes de la aplicación (Message Catalog) | 18/09/2026 | Aceptado |
 | [ADR-019](#adr-019) | Mecanismo de concurrencia para la cola de reservas | 07/09/2026 | Propuesto |
 | [ADR-020](#adr-020) | Elección del tipo de motor para la búsqueda del catálogo: Relacional vs no relacional | 07/09/2026 | Propuesto |
-| [ADR-021](#adr-021) | Elección del motor de búsqueda no relacional | 07/09/2026 | Propuesto |
+| [ADR-021](#adr-021) | Elección del motor de búsqueda no relacional | 07/09/2026 | Aceptado |
 | [ADR-022](#adr-022) | Mantener actualizada la búsqueda del catálogo (sincronización con el motor de búsqueda) | 12/09/2026 | Propuesto |
 | [ADR-023](#adr-023) | Selección de la tecnología de la caché | 12/09/2026 | Propuesto |
 | [ADR-024](#adr-024) | Máquina donde se ejecutan el motor de búsqueda y la caché | 20/09/2026 | Propuesto |
@@ -40,19 +40,19 @@
 | [ADR-027](#adr-027) | Estrategia de autorización y control de acceso basado en roles | 07/09/2026 | Propuesto |
 | [ADR-028](#adr-028) | Registro del rol y la institución de cada usuario | 07/09/2026 | Propuesto |
 | [ADR-029](#adr-029) | Manejo de la sesión del usuario en el navegador | 19/09/2026 | Propuesto |
-| [ADR-030](#adr-030) | Selección de la puerta de entrada de las solicitudes (Api Gateway) | 09/09/2026 | Propuesto |
+| [ADR-030](#adr-030) | Selección de la puerta de entrada de las solicitudes (API Gateway) | 09/09/2026 | Propuesto |
 | [ADR-031](#adr-031) | Política de limitación de intentos | 17/09/2026 | Propuesto |
 | [ADR-032](#adr-032) | Selección del filtro de protección del tráfico de entrada (WAF) | 22/09/2026 | Propuesto |
 | [ADR-033](#adr-033) | Entrega de la aplicación web al navegador | 20/09/2026 | Propuesto |
 | [ADR-034](#adr-034) | Selección de la tecnología de cola de mensajes (message broker) | 06/09/2026 | Propuesto |
 | [ADR-035](#adr-035) | Selección de la tecnología de tareas programadas (Worker) | 12/09/2026 | Propuesto |
-| [ADR-036](#adr-036) | Componente de notificaciones (Notification gateway) | 05/09/2026 | Propuesto |
+| [ADR-036](#adr-036) | Componente de notificaciones (Notification gateway) | 05/09/2026 | Aceptado |
 | [ADR-037](#adr-037) | Selección del servicio de envío de correos electrónicos | 04/09/2026 | Propuesto |
 | [ADR-038](#adr-038) | Selección de la pasarela de pagos | 05/09/2026 | Propuesto |
-| [ADR-039](#adr-039) | Evitar pagos y avisos duplicados (Idempotencia) | 12/09/2026 | Propuesto |
-| [ADR-040](#adr-040) | Comportamiento del sistema ante fallas de los servicios externos (Circuit breaker) | 19/09/2026 | Propuesto |
+| [ADR-039](#adr-039) | Evitar pagos y avisos duplicados (Idempotencia) | 12/09/2026 | Aceptado |
+| [ADR-040](#adr-040) | Comportamiento del sistema ante fallas de los servicios externos (Circuit breaker) | 19/09/2026 | Aceptado |
 | [ADR-041](#adr-041) | Entrega de los archivos que el sistema genera | 20/09/2026 | Propuesto |
-| [ADR-042](#adr-042) | Selección de la herramienta de integración y despliegue continuo | 12/09/2026 | Propuesto |
+| [ADR-042](#adr-042) | Selección de la herramienta de integración y despliegue continuo | 12/09/2026 | Aceptado |
 | [ADR-043](#adr-043) | Almacenamiento de las claves de acceso a servicios (Key Vault) | 20/09/2026 | Propuesto |
 | [ADR-044](#adr-044) | Selección de la herramienta de monitoreo del sistema (Monitoreo / instrumentación) | 18/09/2026 | Propuesto |
 | [ADR-045](#adr-045) | Inmutabilidad del historial transaccional y de los registros de auditoría de seguridad | 06/09/2026 | Propuesto |
@@ -61,14 +61,21 @@
 | [ADR-048](#adr-048) | Selección de tecnología de auditoría y logs de eventos | 12/09/2026 | Propuesto |
 | [ADR-049](#adr-049) | Herramienta de pruebas unitarias del backend | 06/09/2026 | Propuesto |
 | [ADR-050](#adr-050) | Entrega de los datos de una institución que cancela su membresía | 20/09/2026 | Propuesto |
-
+| [ADR-051](#adr-051) | Selección del estilo arquitectónico del backend | 25/09/2026 | Propuesto |
+| [ADR-052](#adr-052) | Estilo de comunicación usado | 25/09/2026 | Propuesto |
+| [ADR-053](#adr-053) | Manejo del crecimiento de las tablas de historial | 27/09/2026 | Propuesto |
+| [ADR-054](#adr-054) | Capacidad de la base de datos cuando un servidor no alcance | 27/09/2026 | Propuesto |
+| [ADR-055](#adr-055) | Dónde se guardan las imágenes del sistema | 27/09/2026 | Aceptado |
+| [ADR-056](#adr-056) | Seguimiento de una solicitud entre las piezas del sistema | 27/09/2026 | Propuesto |
+| [ADR-057](#adr-057) | Organización de las reglas del préstamo, la devolución y la multa | 27/09/2026 | Aceptado |
+| [ADR-058](#adr-058) | Eliminación de los datos personales de un usuario | 27/09/2026 | Propuesto |
 ---
 
 <a id="adr-001"></a>
 ## ADR-001 · Selección de la plataforma de nube para el ambiente de despliegue
 
 **Fecha:** 16/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-15, US-16, US-26, US-31, RT-17, RN-07, RN-11  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -161,7 +168,7 @@ Se descarta C porque, aunque da más control sobre cómo se ejecuta el backend, 
 ---
 
 <a id="adr-003"></a>
-## ADR-003 · Formato de empaquetado del Back End
+## ADR-003 · Formato de empaquetado del backend
 
 **Fecha:** 18/09/2026  
 **Estado:** Propuesto  
@@ -302,9 +309,10 @@ Se necesita elegir el lenguaje y la herramienta para el backend, teniendo en cue
 
 ### Alternativas consideradas
 
+
 **A.** Java con Spring Boot. Herramienta muy usada para construir el lado del servidor. Trae incluidos el manejo de las solicitudes, el acceso a la base de datos con control de operaciones completas, la revisión del pase de entrada y la conexión con servicios externos. Permite escribir una parte del sistema de forma reactiva y otra no, dentro del mismo proyecto. Sin costo de licencia.
 
-**B.** C# con.NET. Herramienta equivalente, de Microsoft, también sin costo de licencia. Trae incluido lo mismo, permite las dos formas de programar y se empaqueta igual en un contenedor.
+**B.** C# con .NET. Herramienta equivalente, de Microsoft, también sin costo de licencia. Trae incluido lo mismo, permite las dos formas de programar y se empaqueta igual en un contenedor.
 
 **C.** TypeScript con NestJS, sobre Node. Usa el mismo lenguaje que la aplicación web, así que el equipo trabajaría con uno solo. Todo lo que hace es no bloqueante por naturaleza: el servidor nunca se queda detenido esperando una respuesta.
 
@@ -343,7 +351,7 @@ Se descarta D porque escribir qué es cada dato es opcional y la herramienta no 
 ## ADR-007 · Estilo de comunicación de la API de BookHive
 
 **Fecha:** 17/09/2026  
-**Estado:** Propuesto  
+**Estado:** Reemplazado por ADR-052  
 **Drivers de arquitectura:** RF-14, RF-19, RT-05, RT-09  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -478,7 +486,7 @@ Se descarta C porque su principal aporte es armar las páginas en el servidor, a
 ## ADR-010 · Elección del tipo de motor de base de datos: Relacional vs no relacional
 
 **Fecha:** 04/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** RF-15, RT-01, RT-03, RT-06  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -568,7 +576,7 @@ Se descarta C porque la separación quedaría escrita en cada consulta: basta qu
 ## ADR-012 · Elección del motor de base de datos relacional
 
 **Fecha:** 04/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** RF-02, RF-05, RT-01, RT-02, RN-11  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -616,7 +624,7 @@ Se descarta Oracle porque cobra licencia y no está disponible como servicio adm
 ## ADR-013 · Disponibilidad de la base de datos ante la falla del servidor
 
 **Fecha:** 07/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-16, RT-22  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -661,7 +669,7 @@ Se descarta B porque depende de que alguien del equipo esté disponible en el mo
 ## ADR-014 · Copias de seguridad de la información
 
 **Fecha:** 07/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-16, RT-22  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -679,11 +687,10 @@ La información de BookHive también se puede dañar sin que falle ningún servi
 
 ### Decisión
 
-Se elige la opción C, la copia diaria más el registro de cambios.
 
-Permite volver al minuto anterior al error en lugar de perder el día completo, y conservar ese registro casi no ocupa espacio, porque la base de datos ya lo escribe para poder funcionar. En el servicio administrado, las dos cosas se activan con una casilla: no hay nada que construir.
+Se elige la opción C, la copia diaria más el registro de cambios. Permite volver al minuto anterior al error en lugar de perder el día completo, y conservar ese registro casi no ocupa espacio, porque la base de datos ya lo escribe para poder funcionar. En el servicio administrado, las dos cosas se activan con una casilla: no hay nada que construir.
 
-Queda definido que la copia se genera automáticamente una vez al día, que se conservan los últimos 30 días, plazo que cubre el ciclo mensual de facturación, que las copias se guardan fuera de la región donde corre el sistema, y que periódicamente se verifica que una copia se pueda restaurar.
+Queda definido que la copia se genera automáticamente una vez al día, que se conservan los últimos 30 días , plazo que cubre el ciclo mensual de facturación, que las copias se guardan fuera de la región donde corre el sistema, y que periódicamente se verifica que una copia se pueda restaurar.
 
 Se descarta A porque dejaría al sistema sin defensa ante un error humano, que es el riesgo más frecuente. Se descarta B porque un error a media tarde obligaría a volver a la copia de la madrugada, perdiendo el día completo de todas las universidades y no solo lo que se dañó.
 
@@ -798,7 +805,7 @@ Se descarta C porque, sin una escala común, comparar registros entre institucio
 ## ADR-017 · Catálogo de parámetros de negocio (Parameter catalog)
 
 **Fecha:** 18/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-22, RF-09, RF-21, RN-10  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -846,7 +853,7 @@ Se descarta C porque sería una pieza más que instalar y mantener, y guardaría
 ## ADR-018 · Catálogo de mensajes de la aplicación (Message Catalog)
 
 **Fecha:** 18/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** RF-04, RF-09, RF-19, RT-12  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -904,6 +911,7 @@ Se descarta B porque, aunque reúne los textos en un solo lugar, cambiarlos segu
 Cuando un ejemplar no está disponible, varios usuarios pueden reservarlo al mismo tiempo, y BookHive debe atenderlos en el orden exacto en que llegaron. Si dos solicitudes llegan casi simultáneamente, el sistema no puede darle el turno a la persona equivocada ni asignar el mismo ejemplar a dos personas a la vez. Hay que definir cómo se garantiza ese orden bajo concurrencia.
 
 ### Alternativas consideradas
+
 
 **A.** Bloquear la fila del ejemplar mientras se procesa cada solicitud. Cuando alguien pide reservar, el sistema bloquea esa fila hasta terminar, evitando que dos solicitudes se procesen a la vez sobre el mismo ejemplar. Sin embargo, no queda registrado quién llegó primero, así que si varias solicitudes llegan casi al mismo tiempo, no hay garantía de que se atiendan en el orden real de llegada.
 
@@ -981,7 +989,7 @@ Se descarta A porque las búsquedas competirían por recursos con las operacione
 ## ADR-021 · Elección del motor de búsqueda no relacional
 
 **Fecha:** 07/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-27, RF-12, RN-11  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -1051,27 +1059,27 @@ Los títulos se guardan en la base de datos principal y se buscan en un motor de
 
 ### Decisión
 
-Se elige la opción B, anotar el cambio como pendiente, con una revisión periódica de respaldo.
 
-La anotación se hace en el mismo paso en que se guarda el título: o quedan los dos, o no queda ninguno, así que nunca hay un título guardado sin que la búsqueda se entere.
+Se elige la opción B, anotar el cambio como pendiente, con una revisión periódica de respaldo. La anotación se hace en el mismo paso en que se guarda el título: o quedan los dos, o no queda ninguno, así que nunca hay un título guardado sin que la búsqueda se entere. Ese cambio llega a la búsqueda por dos caminos. El normal: apenas se guarda el título, el sistema publica un aviso, el backend lo recibe y actualiza la búsqueda, así que un título aparece en menos de cinco segundos. El de respaldo: cada minuto, una tarea programada busca los cambios que quedaron sin aplicar y los reenvía, de modo que si la mensajería falla, el título aparece a más tardar un minuto después. Además, una vez al día, en horas de baja actividad, se compara el catálogo completo contra el índice para corregir cualquier diferencia que haya sobrevivido a los dos caminos anteriores.
 
-Ese cambio llega a la búsqueda por dos caminos. El normal: apenas se guarda el título, el sistema publica un aviso, el backend lo recibe y actualiza la búsqueda en pocos segundos. El de respaldo: una tarea programada revisa cada cierto tiempo qué cambios quedaron sin aplicar y los reenvía.
+Queda definido el tiempo máximo de desactualización: menos de cinco segundos en condiciones normales y menos de un minuto si la mensajería falla. Si un cambio lleva más de cinco minutos sin aplicarse, el sistema avisa al equipo.
 
-Se descarta A porque si el sistema falla entre las dos escrituras, el título queda guardado sin que la búsqueda se entere. Se descarta C porque exige sumar un servicio más, con su propio costo, para algo que ya se puede hacer con lo que hay. Se descarta D porque entre una recarga y la siguiente la búsqueda queda desactualizada, y cada recarga pesa más a medida que crece el catálogo.
+Se descarta A porque si el sistema falla entre las dos escrituras, el título queda guardado sin que la búsqueda se entere. Se descarta C porque exige sumar un servicio más, con su propio costo, para algo que ya se puede hacer con lo que hay. Se descarta D porque, si recargar todo es la única forma de actualizar, entre una recarga y la siguiente la búsqueda queda desactualizada. Este mecanismo corresponde al patrón Outbox: el cambio del negocio y el aviso pendiente se guardan juntos, de modo que no puede existir el uno sin el otro.
 
 ### Consecuencias
+
 
 **Positivas**
 
 1. Ningún cambio del catálogo se pierde: si el título quedó guardado, tarde o temprano aparece en la búsqueda.
 2. Si el motor de búsqueda falla, los cambios esperan y se aplican cuando vuelve, sin impedir que se sigan registrando títulos.
-3. No se agrega nada nuevo porque se usa el sistema de Message Breaker y las tareas programadas ya decididas.
+3. No se agrega nada nuevo porque se usan la mensajería y las tareas programadas ya decididas.
 
 **Negativas**
 
-1. La búsqueda no se actualiza al instante: un título nuevo puede tardar unos segundos en aparecer. Por eso la disponibilidad de ejemplares no se toma de la búsqueda.
+1. La búsqueda no se actualiza al instante: un título nuevo tarda unos segundos en aparecer. Por eso la cantidad de ejemplares disponibles no se toma de la búsqueda, sino de la base de datos.
 2. Un mismo cambio puede enviarse dos veces, así que la búsqueda debe aplicarlo una sola vez.
-3. Si la tarea que envía los cambios se detiene, la búsqueda deja de actualizarse sin mostrar ningún error hasta la siguiente revisión periódica.
+3. Si la tarea de respaldo se detiene, la búsqueda deja de actualizarse sin mostrar ningún error, y eso solo se nota por la alerta de cambios pendientes.
 
 ---
 
@@ -1420,15 +1428,15 @@ Todo lo que un usuario hace en BookHive llega al sistema como una solicitud. Con
 
 ### Decisión
 
-Se elige la opción C, Spring Cloud Gateway, desplegada como un contenedor propio delante del backend.
 
-No tiene licencia ni cobro por uso; revisa el mismo pase que el resto del sistema, sin montar una segunda revisión, y cuenta los intentos sobre la caché que ya existe, así que no suma ninguna herramienta nueva.
+Se elige la opción C, Spring Cloud Gateway, desplegada como un contenedor propio delante del backend. No tiene licencia ni cobro por uso; revisa el mismo pase que el resto del sistema , sin montar una segunda revisión, y cuenta los intentos sobre la caché que ya existe, así que no suma ninguna herramienta nueva.
 
 Se descarta A porque obliga a mantener una pieza encendida todo el tiempo con su propia base de datos y un gasto fijo mensual, y aun así el pase quedaría revisándose en dos lugares distintos.
 
 Se descarta B porque revisa el tráfico antes de que se sepa de quién viene, así que solo puede contar por dirección de internet y nunca por cuenta, que es justamente lo que este punto de entrada necesita hacer.
 
 ### Consecuencias
+
 
 **Positivas**
 
@@ -1440,6 +1448,7 @@ Se descarta B porque revisa el tráfico antes de que se sepa de quién viene, as
 
 1. Revisar el pase en la entrada no reemplaza la comprobación de rol e institución dentro del sistema: siguen siendo dos revisiones distintas.
 2. Es un contenedor más que construir, desplegar y vigilar, y agrega un salto en cada solicitud.
+3. Al ser el único punto de entrada, si esta pieza se detiene, el sistema completo deja de atender. Por eso su capacidad se ajusta sola, igual que las demás piezas.
 
 ---
 
@@ -1502,7 +1511,8 @@ BookHive está en internet y puede recibir avalanchas de solicitudes o solicitud
 
 ### Alternativas consideradas
 
-**A.** Cloud Armor. Filtro de Google que revisa cada solicitud antes de que llegue al sistema y bloquea las que parecen ataques. Lo administra Google. Cuesta cerca de 96.000 COP al mes.
+
+**A.** Cloud Armor. Filtro de Google que revisa cada solicitud antes de que llegue al sistema y bloquea las que parecen ataques. Lo administra Google. Cuesta cerca de 96.000COP al mes.
 
 **B.** Cloudflare. Filtro de otra empresa por el que pasa todo el tráfico antes de llegar al sistema. Lo administra Cloudflare. Cuesta cerca de 64.000 COP al mes.
 
@@ -1550,9 +1560,10 @@ Ya se decidió que la parte visual es un proyecto separado del servidor, con qu�
 
 ### Alternativas consideradas
 
+
 **A.** Un paquete propio en Google Cloud Run, con un programa pequeño adentro que entrega los archivos. El equipo lo arma y lo mantiene; Google lo mantiene encendido. Cuesta unos 320.000 COP al año.
 
-**B.** Un depósito de archivos de Google (Cloud Storage), donde se suben los archivos y Google se los entrega al navegador. El equipo solo sube los archivos. La dirección propia y la conexión segura se consiguen con un repartidor de tráfico que cuesta 50.000 COP al mes.
+**B.** Un depósito de archivos de Google (Cloud Storage), donde se suben los archivos y Google se los entrega al navegador. El equipo solo sube los archivos. La dirección propia y la conexión segura se consiguen con un repartidor de tráfico que cuesta 50.000COP al mes.
 
 **C.** Firebase Hosting, el servicio de Google hecho para publicar este tipo de aplicaciones. El equipo sube la carpeta y Google hace el resto, con la dirección propia y la conexión segura incluidas. Sin costo hasta 360 MB descargados por día; pasado eso, 473 COP por GB.
 
@@ -1566,6 +1577,7 @@ Se descarta C porque le pasa las solicitudes al servidor por un camino que no at
 
 ### Consecuencias
 
+
 **Positivas**
 
 1. No suma costo fijo: el repartidor ya se paga por el filtro de protección.
@@ -1576,7 +1588,7 @@ Se descarta C porque le pasa las solicitudes al servidor por un camino que no at
 **Negativas**
 
 1. Si algún día se quita el filtro, el repartidor quedaría pagándose solo para entregar la aplicación.
-2. La entrega queda atada a Google, así que cambiar de proveedor obliga a rehacer la publicación.
+4. La entrega queda atada a Google, así que cambiar de proveedor obliga a rehacer la publicación.
 
 ---
 
@@ -1682,7 +1694,7 @@ Se descarta C porque obligaría a escribir dentro de la base de datos reglas que
 ## ADR-036 · Componente de notificaciones (Notification gateway)
 
 **Fecha:** 05/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-08, US-10, US-25, RF-19  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -1835,7 +1847,7 @@ Se descarta ePayco porque, a tarifas equivalentes, Wompi ofrece el respaldo del 
 ## ADR-039 · Evitar pagos y avisos duplicados (Idempotencia)
 
 **Fecha:** 12/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-10, US-11, RF-08, RF-14, RT-09, RN-02  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -1885,7 +1897,7 @@ Se descarta D porque solo alcanzaría a los mensajes que pasan por el sistema de
 ## ADR-040 · Comportamiento del sistema ante fallas de los servicios externos (Circuit breaker)
 
 **Fecha:** 19/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-10, US-11, US-24, RT-16  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -1983,7 +1995,7 @@ Se descarta C porque, al no haber ningún archivo que no se pueda reconstruir, n
 ## ADR-042 · Selección de la herramienta de integración y despliegue continuo
 
 **Fecha:** 12/09/2026  
-**Estado:** Propuesto  
+**Estado:** Aceptado  
 **Drivers de arquitectura:** US-31, RT-13, RT-14  
 **Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
 
@@ -2245,6 +2257,7 @@ Construirla desde cero significaría rehacer capacidades que ya están resueltas
 
 ### Consecuencias
 
+
 **Positivas**
 
 1. Se aprovechan funciones ya construidas y probadas: guardar, buscar, detectar patrones, sin invertir tiempo de desarrollo en rehacerlas.
@@ -2343,6 +2356,7 @@ Se descarta D porque no se puede ejecutar de forma automática con cada cambio, 
 
 ### Consecuencias
 
+
 **Positivas**
 
 1. Las pruebas corren en segundos, sin base de datos ni servicios externos.
@@ -2352,8 +2366,8 @@ Se descarta D porque no se puede ejecutar de forma automática con cada cambio, 
 
 **Negativas**
 
-1. Una pieza simulada que no se comporte como el servicio real puede ocultar un error.
-2. Escribir y mantener las pruebas toma tiempo del equipo en cada funcionalidad nueva.
+2. Una pieza simulada que no se comporte como el servicio real puede ocultar un error.
+3. Escribir y mantener las pruebas toma tiempo del equipo en cada funcionalidad nueva.
 
 ---
 
@@ -2401,3 +2415,360 @@ Se descarta C porque obliga a la institución a construir algo para recibir unos
 1. Con una institución grande, armar los archivos toma tiempo.
 2. Si cambia la forma de los datos, hay que actualizar la explicación publicada.
 3. Una vez entregados, BookHive ya no controla qué pasa con los datos personales.
+
+---
+
+<a id="adr-051"></a>
+## ADR-051 · Selección del estilo arquitectónico del backend
+
+**Fecha:** 25/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** US-16, US-24, US-31, US-32, US-26, RT-01, RT-04, RF-02, RT-16, RN-11  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Ya se definió dónde funciona el backend; falta decidir cómo se organiza. La opción elegida debe evitar que una falla en una parte detenga todo el sistema, garantizar que un préstamo se registre completo o no se registre, y poder mantenerse con un presupuesto fijo.
+
+### Alternativas consideradas
+
+**A.** Monolito modular. Una sola pieza, dividida por dentro en partes del negocio que comparten recursos y base de datos.
+
+**B.** Arquitectura basada en servicios. Varias piezas separadas, una por cada parte del negocio, que comparten la misma base de datos.
+
+**C.** Microservicios. Muchas piezas pequeñas, cada una con su propia base de datos, así que el préstamo y el inventario quedan en bases distintas.
+
+### Decisión
+
+Se elige la opción B, arquitectura basada en servicios. Cada parte funciona por separado, así que si una falla, las demás siguen. Como todas usan la misma base de datos, un préstamo y el descuento del inventario se guardan en un solo paso. Y cinco piezas son manejables con un presupuesto fijo.
+
+Se descarta A porque todas las partes comparten recursos, y una falla en una puede detener todo el sistema.
+
+Se descarta C porque el préstamo y el inventario quedan en bases distintas, y no se puede garantizar que el préstamo se registre completo.
+
+### Consecuencias
+
+**Positivas**
+
+1. Si una pieza falla, las demás siguen funcionando.
+2. Un préstamo y el descuento del inventario se guardan en un solo paso.
+3. Cada pieza se actualiza por separado, sin detener a las demás.
+4. Cada pieza aumenta su capacidad de atención según su propia demanda.
+
+**Negativas**
+
+1. Hay cinco piezas que publicar y vigilar, en lugar de una.
+2. Un cambio en la base de datos puede afectar a varias piezas, así que cada una solo modifica sus propias tablas.
+
+---
+
+<a id="adr-052"></a>
+## ADR-052 · Estilo de comunicación usado
+
+**Fecha:** 25/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** RT-05, US-01, US-04, US-14, RF-12, RF-23, US-18, RT-09, US-11, RF-05  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Las solicitudes ya tienen un recorrido definido: salen de la aplicación web, pasan por el filtro de protección y la puerta de entrada, y llegan al backend. Falta decidir en qué forma se piden y se responden. La forma elegida debe permitir controlar por separado quién usa cada operación y cuántas veces, cargar las pantallas que reúnen datos de varias partes sin hacer muchas llamadas, y recibir los avisos de la pasarela de pagos.
+
+### Alternativas consideradas
+
+**A.** REST. Una dirección por cada operación. El backend decide qué datos devuelve cada una, así que una pantalla que reúne datos de varias partes hace una llamada por cada parte.
+
+**B.** GraphQL. Una sola dirección para todas las operaciones. La aplicación web pide exactamente los datos que necesita, en una sola consulta.
+
+**C.** REST y GraphQL combinados. REST para las operaciones que cambian datos y para los avisos de pagos. GraphQL solo para consultar las pantallas que reúnen datos de varias partes.
+
+### Decisión
+
+Se elige la opción C, REST y GraphQL combinados. Las operaciones que cambian datos van por REST, cada una con su propia dirección, así que se puede controlar por separado quién las usa y cuántas veces. Por ahí mismo llegan los avisos de la pasarela de pagos. GraphQL se usa solo para consultar, y carga en una sola consulta las pantallas que reúnen datos de varias partes.
+
+Se descarta A porque cada pantalla que reúne datos de varias partes obliga a hacer una llamada por cada parte.
+
+Se descarta B porque todas las operaciones entran por la misma dirección, y no se puede controlar cada una por separado.
+
+### Consecuencias
+
+**Positivas**
+
+1. Cada operación que cambia datos se controla por separado: quién la usa y cuántas veces.
+2. Las pantallas que reúnen datos de varias partes se cargan con una sola consulta.
+3. La aplicación web recibe solo los datos que muestra, sin datos de más.
+4. Los avisos de la pasarela de pagos llegan por REST, en la misma forma en que ella los envía.
+
+**Negativas**
+
+1. El equipo debe manejar dos formas de comunicación en el mismo sistema.
+2. Cada consulta de GraphQL debe filtrar por la institución del usuario, para que nadie vea datos de otra.
+
+---
+
+<a id="adr-053"></a>
+## ADR-053 · Manejo del crecimiento de las tablas de historial
+
+**Fecha:** 27/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** RT-03, RT-24, US-12, US-18, US-20, US-33, US-26, RN-11  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Las tablas de historial (préstamos, multas, pagos y avisos enviados) solo reciben registros nuevos y nunca se modifican, así que crecen todos los días. Falta decidir cómo manejarlas para que no se vuelvan lentas. La opción elegida debe mantener rápidas las consultas por fecha, permitir retirar los registros viejos sin afectar los recientes y no sumar costo.
+
+### Alternativas consideradas
+
+**A.** Una sola tabla con índice por fecha. Cada historial es una tabla única, y un índice ayuda a encontrar los registros por fecha. Los registros viejos se retiran borrándolos uno por uno.
+
+**B.** Partición por periodo. Cada tabla se divide por dentro en una parte por mes, en el mismo servidor, y el sistema la sigue viendo como una sola tabla. Un mes viejo se retira quitando su parte completa.
+
+**C.** Archivar lo viejo fuera de la base. Los registros antiguos se trasladan cada cierto tiempo a un almacenamiento aparte y salen de la base. Consultarlos exige buscarlos en ese otro lugar.
+
+### Decisión
+
+Se elige la opción B, partición por periodo. Cada consulta por fecha revisa solo los meses que necesita, y un mes viejo se retira completo sin tocar los recientes. Todo ocurre en el mismo servidor, sin costo adicional.
+
+Se descarta A porque borrar registros viejos uno por uno frena la tabla mientras se borran.
+
+Se descarta C porque una auditoría o un reclamo de meses atrás obliga a buscar los registros fuera de la base.
+
+### Consecuencias
+
+**Positivas**
+
+1. Las consultas por fecha revisan solo los meses que necesitan.
+2. Un mes viejo se retira completo, de una sola vez.
+3. El backend sigue viendo cada historial como una sola tabla.
+4. No suma servidores ni costo.
+
+**Negativas**
+
+1. Una consulta que no filtra por fecha revisa todas las partes y no gana velocidad.
+
+---
+
+<a id="adr-054"></a>
+## ADR-054 · Capacidad de la base de datos cuando un servidor no alcance
+
+**Fecha:** 27/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** US-26, US-15, RT-01, RT-04, RT-02, RF-05, RN-11  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+La base de datos funciona en un solo servidor principal, con uno de respaldo. Falta decidir qué hacer si los préstamos, devoluciones y pagos llegan a superar lo que ese servidor puede atender. La opción elegida debe mantener cada préstamo completo, conservar separados los datos de cada institución y no sumar costo mientras no haga falta.
+
+### Alternativas consideradas
+
+**A.** Un solo servidor que se agranda. Toda la información vive en un servidor, y cuando no alcanza se le aumenta el procesador y la memoria, hasta el tamaño máximo que ofrece la plataforma.
+
+**B.** Repartir por institución desde el inicio. Desde el primer día hay dos servidores, cada uno con su base de respaldo y con los datos completos de un grupo de instituciones.
+
+**C.** Repartir por institución cuando haga falta. Hoy hay un solo servidor. Cuando el monitoreo muestre que ya no alcanza, se trasladan instituciones completas a un segundo servidor.
+
+### Decisión
+
+Se elige la opción C, repartir por institución cuando haga falta. Cada institución vive completa en un solo servidor, así que cada préstamo se guarda completo y sus datos siguen separados de los de las demás. El segundo servidor se paga solo cuando el primero ya no alcance.
+
+Se descarta A porque, al llegar al tamaño máximo de la máquina, no queda hacia dónde crecer.
+
+Se descarta B porque se paga desde el primer día un segundo servidor que todavía no se necesita..
+
+### Consecuencias
+
+**Positivas**
+
+1. Cada préstamo se guarda completo en un solo servidor.
+2. Los datos de cada institución siguen juntos y separados de los de las demás.
+3. El segundo servidor se paga solo cuando el primero ya no alcance.
+4. Trasladar una institución no exige rediseñar nada, porque ya tiene su propio espacio.
+
+**Negativas**
+
+1. Hay que fijar la cifra que activa el traslado y vigilarla todo el tiempo.
+2. Con dos servidores, los reportes de toda la plataforma deben consultar ambos.
+
+---
+
+<a id="adr-055"></a>
+## ADR-055 · Dónde se guardan las imágenes del sistema
+
+**Fecha:** 27/09/2026  
+**Estado:** Aceptado  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Ya está decidido que las piezas del backend se entregan empaquetadas en contenedores y que Cloud Run las ejecuta. Cloud Run no guarda imágenes: siempre las descarga del lugar donde estén publicadas. Falta decidir cuál es ese lugar, teniendo en cuenta que el repositorio del código es público y que el presupuesto es fijo.
+
+### Alternativas consideradas
+
+**A.** Artifact Registry. Almacén de imágenes de Google, en la misma nube y el mismo proyecto donde corre el sistema. La imagen queda privada y Cloud Run la toma con los permisos del propio proyecto, sin guardar claves. Los primeros 0,5 GB al mes no tienen costo y después se cobra por gigabyte.
+
+**B.** Docker Hub. El almacén más conocido. Su plan gratuito guarda sin límite las imágenes públicas, limita las privadas y restringe cuántas veces se puede descargar una imagen en un periodo.
+
+**C.** El registro de GitHub. Viene incluido con la cuenta donde ya está el código. Guardar y descargar imágenes públicas no tiene costo ni límite.
+
+### Decisión
+
+Se elige C, el registro de GitHub, con las imágenes publicadas como públicas.
+
+En eficiencia de costos, es la única de las tres que no cuesta nada: ni el espacio ocupado ni las descargas, sin límite de versiones.
+
+En operabilidad, vive en la misma cuenta donde ya está el código y donde se construye la imagen, así que no hay otro almacén que crear ni administrar, y publicar no exige claves nuevas.
+
+En seguridad, la imagen queda pública igual que el repositorio, y no revela nada que no esté ya a la vista: las librerías y sus versiones están escritas en el código. Las claves nunca van dentro de la imagen; se leen al ejecutar.
+
+Cada versión se publica con la etiqueta del cambio que la originó, así que Cloud Run siempre recibe una etiqueta nueva y nunca queda esperando a que se venza una copia guardada.
+
+Se descarta A porque cobra por el espacio ocupado, cerca de 2.400 pesos al año, a cambio de mantener privada una imagen que no necesita serlo. Se descarta B porque limita cuántas veces se puede descargar una imagen en un periodo, y el propio proveedor de la nube recomienda usarlo solo para imágenes oficiales muy conocidas.
+
+### Consecuencias
+
+**Positivas**
+
+1. No cuesta nada, ni por espacio ni por descargas.
+2. Está donde ya vive el código: no hay otro almacén que administrar ni claves nuevas que guardar.
+3. Las claves no van dentro de la imagen: se leen al ejecutar.
+
+**Negativas**
+
+1. La imagen queda pública. Si algún día el repositorio pasa a privado, hay que revisar esta decisión.
+2. Cloud Run baja la imagen por internet, así que encender una copia nueva es algo más lento que si estuviera en la misma región.
+
+---
+
+<a id="adr-056"></a>
+## ADR-056 · Seguimiento de una solicitud entre las piezas del sistema
+
+**Fecha:** 27/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** RT-15, US-33, US-24, US-15, US-10, RN-01, RN-11  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Un pago pasa por el WAF, el API Gateway, el servicio de Pagos y Wompi; hoy cada uno guarda sus registros aparte, así que si el pago falla no se sabe dónde ocurrió ni cuánto tardó cada paso. Falta decidir cómo seguir una solicitud de principio a fin. La opción elegida debe mostrar en qué paso falló y cuánto tardó cada uno, también cuándo un servicio le avisa a otro por Pub/Sub, y no sumar costo.
+
+### Alternativas consideradas
+
+**A.** Buscar en los registros por un número común. Cada servicio anota en sus registros el mismo número de la solicitud. Para seguirla, se buscan en Cloud Logging los registros con ese número, uno por uno. No suma herramientas ni costo.
+
+**B.** Jaeger, instalado por el equipo. Herramienta gratuita que recibe los datos que envían los servicios con OpenTelemetry, el estándar abierto, y muestra el recorrido de cada solicitud como una línea de tiempo, con lo que tardó cada paso. El equipo la instala y la mantiene en una máquina propia, encendida todo el tiempo.
+
+**C.** Cloud Trace. Servicio de Google, en la misma plataforma, que recibe los datos que envían los servicios con OpenTelemetry y muestra el recorrido de cada solicitud como una línea de tiempo, junto a los registros y las mediciones. Google lo mantiene. Los primeros 2,5 millones de pasos registrados al mes son gratis; después cobra USD 0,20 por millón.
+
+### Decisión
+
+Se elige la opción C, Cloud Trace. Muestra en una línea de tiempo en qué paso falló una solicitud y cuánto tardó cada uno, en la misma plataforma donde ya están los registros y las mediciones, sin nada que instalar. El seguimiento continúa también por Pub/Sub, porque cada servicio pasa el número de la solicitud dentro del aviso que envía. En el volumen del proyecto no genera costo.
+
+Se descarta A porque seguir una solicitud obliga a buscar a mano los registros de cada servicio, sin ver cuánto tardó cada paso.
+
+Se descarta B porque exige una máquina encendida todo el tiempo, y mantenerla, para algo que la plataforma ya ofrece.
+
+### Consecuencias
+
+**Positivas**
+
+1. Se ve en una línea de tiempo en qué paso falló una solicitud y cuánto tardó cada uno.
+2. Registros, mediciones y seguimiento quedan en un solo lugar: desde un error se salta a su recorrido.
+3. El volumen del proyecto no genera costo.
+
+**Negativas**
+
+1. Hay que activar a propósito que Pub/Sub lleve el número de la solicitud; si no, el seguimiento se corta ahí.
+2. Por encima de lo gratuito se cobra por volumen, así que solo se sigue un porcentaje de las solicitudes normales.
+3. Cada paso lleva solo el número de cuenta y la institución, nunca nombre ni correo.
+
+---
+
+<a id="adr-057"></a>
+## ADR-057 · Organización de las reglas del préstamo, la devolución y la multa
+
+**Fecha:** 27/09/2026  
+**Estado:** Aceptado  
+**Drivers de arquitectura:** RF-15, RF-10, RF-21, US-13, US-22, RT-19  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+Un préstamo pasa por varios estados (activo, vencido, devuelto), y varias funciones los cambian: prestar, devolver, reservar y vencer. Al devolverse tarde se genera una multa, cuyo cálculo cambia según cada institución. Falta decidir cómo se organizan esas reglas en el código. La opción elegida debe impedir desde un solo lugar los cambios de estado no permitidos, dejar que cada institución tenga su forma de calcular la multa sin tocar el código, y guardar una devolución completa o no guardarla.
+
+### Alternativas consideradas
+
+**A.** Condiciones escritas en cada función. Cada función revisa por su cuenta si el cambio de estado está permitido y calcula la multa con una lista de condiciones según la institución.
+
+**B.** Reglas dentro de la base de datos. Los cambios de estado permitidos y el cálculo de la multa se validan con reglas escritas en la base de datos. Probarlas exige tener la base encendida.
+
+**C.** Patrones de diseño en el código. -Cada estado del préstamo tiene la lista de estados a los que puede pasar, y cualquier otro cambio se rechaza (patrón State). -Cada forma de calcular la multa se programa por separado, y el administrador de cada institución elige cuál usar y con qué valores (patrón Strategy). -Una devolución guarda todos sus cambios juntos o ninguno (patrón Unit of Work).
+
+### Decisión
+
+Se elige la opción C, patrones de diseño en el código. Cada estado tiene escrita una sola vez la lista de estados a los que puede pasar, así que ninguna función puede hacer un cambio no permitido. El administrador de cada institución elige cómo se calcula su multa y con qué valores, sin tocar el código. Y al devolver un libro, el cierre del préstamo, la multa y el ejemplar liberado se guardan juntos, o no se guarda nada.
+
+Se descarta A porque la misma regla queda repetida en cada función, y basta con que una la olvide para permitir un cambio indebido.
+
+Se descarta B porque cada regla solo se puede probar con la base de datos encendida.
+
+### Consecuencias
+
+**Positivas**
+
+1. Un cambio de estado no permitido se rechaza siempre, venga de la función que venga.
+2. El administrador cambia la forma de calcular la multa de su institución sin esperar una versión nueva.
+3. Una devolución nunca queda a medias.
+4. Cada regla se prueba sola, sin encender la base de datos.
+
+**Negativas**
+
+1. Agregar un estado nuevo exige definir a qué estados puede pasar y revisar los demás.
+2. El administrador solo puede elegir entre las formas de calcular la multa que ya están programadas.
+
+---
+
+<a id="adr-058"></a>
+## ADR-058 · Eliminación de los datos personales de un usuario
+
+**Fecha:** 27/09/2026  
+**Estado:** Propuesto  
+**Drivers de arquitectura:** RF-27, RT-24, RN-01, RT-03, US-20  
+**Participantes:** Johan Camilo Bedoya · Fernando Zuluaga Botero
+
+### Contexto
+
+La ley obliga a eliminar los datos personales de un usuario cuando lo pide o cuando vence el plazo de conservación, pero el historial de préstamos, multas y pagos no se puede modificar ni borrar. Falta decidir cómo cumplir las dos cosas al tiempo. La opción elegida debe dejar sin identificar a la persona, conservar el registro de cada operación y aplicarse solo cuando no tenga préstamos activos ni multas pendientes.
+
+### Alternativas consideradas
+
+**A.** Borrar el usuario con todo su historial. Se eliminan la persona y todos sus préstamos, multas y pagos.
+
+**B.** Reemplazar los datos dentro de cada registro. El nombre y el correo quedan escritos dentro de cada préstamo, multa y pago. Al eliminar, se sobrescriben uno por uno con un texto como "usuario eliminado".
+
+**C.** Guardar la identidad aparte. Los préstamos, multas y pagos solo llevan un número de usuario, y el nombre, el correo y el documento viven en una ficha aparte. Al eliminar, se borra solo la ficha, y el número queda sin nadie detrás.
+
+### Decisión
+
+Se elige la opción C, guardar la identidad aparte. El historial nunca se toca: solo se borra la ficha, así que cada préstamo, multa y pago sigue registrado sin que se sepa quién lo hizo. La ficha solo se borra si el usuario no tiene préstamos activos ni multas pendientes.
+
+Se descarta A porque se pierde el registro de los préstamos y los pagos, que debe conservarse.
+
+Se descarta B porque obliga a modificar cada registro del historial, que no se puede modificar.
+
+### Consecuencias
+
+**Positivas**
+
+1. Se cumple la ley sin tocar el historial.
+2. La biblioteca sigue sabiendo que un ejemplar se prestó en tal fecha, aunque ya no sepa a quién.
+3. Los reportes siguen contando los préstamos, aunque la persona ya no exista.
+
+**Negativas**
+
+1. Mostrar un préstamo con el nombre de la persona exige unir el historial con la ficha.
+2. Los datos borrados siguen en las copias de seguridad hasta que estas vencen.
+3. La condición de no tener préstamos ni multas se revisa en el momento exacto de borrar.
+
+---
